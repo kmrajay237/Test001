@@ -3,7 +3,8 @@ package pack1;
 public class Tomato {
 
 	public static void main(String[] args) {
-		ParentInterface pi=new EFG();
+		WEBDRIVER driver=new CHROMEDRIVER();
+		driver.m1();
 
 	}
 
@@ -11,3 +12,17 @@ public class Tomato {
 
 
 //WebDriver driver =new ChromeDriver();
+
+interface WEBDRIVER{
+	void m1();
+}
+
+class CHROMEDRIVER implements WEBDRIVER{
+
+	@Override
+	public void m1() {
+		System.out.println("M1");
+		
+	}
+	
+}
