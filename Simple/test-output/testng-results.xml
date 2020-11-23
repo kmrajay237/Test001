@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="23429" started-at="2020-11-23T07:15:15Z" finished-at="2020-11-23T07:15:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23429" started-at="2020-11-23T07:15:15Z" finished-at="2020-11-23T07:15:38Z">
+      <class name="datadriven.Test_02_DataDrivenTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="setup" is-config="true" duration-ms="4934" started-at="2020-11-23T07:15:15Z" finished-at="2020-11-23T07:15:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="loginTest" duration-ms="9781" started-at="2020-11-23T07:15:20Z" data-provider="LoginData" finished-at="2020-11-23T07:15:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="loginTest" duration-ms="1136" started-at="2020-11-23T07:15:30Z" data-provider="LoginData" finished-at="2020-11-23T07:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[adm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="loginTest" duration-ms="1053" started-at="2020-11-23T07:15:31Z" data-provider="LoginData" finished-at="2020-11-23T07:15:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adm@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="loginTest" duration-ms="1103" started-at="2020-11-23T07:15:32Z" data-provider="LoginData" finished-at="2020-11-23T07:15:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adm@yourstore.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[adm]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:datadriven.Test_02_DataDrivenTest@42d80b78]" name="teardown" is-config="true" duration-ms="4715" started-at="2020-11-23T07:15:33Z" finished-at="2020-11-23T07:15:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- datadriven.Test_02_DataDrivenTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

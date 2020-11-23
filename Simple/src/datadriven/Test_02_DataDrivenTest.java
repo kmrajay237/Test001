@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Test_01_DataDrivenTest {
+public class Test_02_DataDrivenTest {
 	WebDriver driver;
 
 	@BeforeClass
@@ -55,15 +55,23 @@ public class Test_01_DataDrivenTest {
 			}
 		}
 	}
-
+ 
 	@DataProvider(name = "LoginData")
-	public String[][] getdata() {
-		String loginData[][] = { 
-				{ "admin@yourstore.com", "admin", "valid" },
-				{ "admin@yourstore.com", "adm", "invalid" }, 
-				{ "adm@yourstore.com", "admin", "invalid" },
-				{ "adm@yourstore.com", "adm", "invalid" } 
-			};
+	public String[][] getdata() throws Exception {
+//		get data from excel
+		String path="./datafiles/testData.xlsx";
+		ExcelUtility utility=new ExcelUtility(path);
+		int totalrows = utility.getRowCount("data");
+		int totalcolumns = utility.getCellCount("data", 1);
+		String loginData[][]=new String[totalrows][totalcolumns];
+		
+		for(int i=1;i<=totalrows;i++) {
+			for(int j=0;j<totalcolumns;j++) {
+				loginData[i-1][j]=utility.getCellData("data", i, j);
+			}
+		}
+		
+		
 		return loginData;
 	}
 
