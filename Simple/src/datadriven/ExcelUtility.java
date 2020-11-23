@@ -1,5 +1,6 @@
 package datadriven;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -67,11 +68,26 @@ public class ExcelUtility {
 	}
 	
 	public void setCellData(String sheetName,int rownum,int colnum,String data) throws Exception {
+		File xlfile=new File(path);
+		if(!xlfile.exists()) {	// if file doesn't exists, create new file
+			workbook=new XSSFWorkbook();
+			fos=new FileOutputStream(path);
+			workbook.write(fos);
+		}
+		
 		fis=new FileInputStream(path);
 		workbook=new XSSFWorkbook(fis);
+		
+		if(workbook.getSheetIndex(sheetName)==-1) {
+			workbook.getSheet(sheetName);
+		}
 		sheet=workbook.getSheet(sheetName);
 		
+		if(sheet.getRow(rownum)==null) {
+			sheet.getRow(rownum);
+		}
 		row=sheet.getRow(rownum);
+		
 		cell=row.createCell(colnum);
 		cell.setCellValue(data);
 		
